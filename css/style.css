@@ -1,0 +1,47 @@
+body{
+    background: gray;
+}
+
+h1 {
+    color: white; 
+    background: dodgerblue;
+    text-align: center; /* Centraliza */
+    font-size: 36px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 80px 50px;
+    /* top&bottom, right&left  */     
+    padding: 50px 0px;
+}
+
+h2 {
+    color: white;
+    border-radius: 10px;
+}
+
+#subTitulo1 {
+    background: orangered;
+}
+
+#subTitulo2 {
+    background: purple;
+}
+
+.sombra {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.518); 
+}
+
+a {
+    background: black;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none; /* Remove a linha que fica abaixo do link */
+    padding: 5px;
+    text-transform: uppercase; /* Coloca as todas as letras em maiusculas */
+}
+
+a:hover { /* Hover é o momento em que passamos o mouse sobre o link */
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
