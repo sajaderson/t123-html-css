@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meus links</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div id="container">
-        <div id="perfil">
-            <img src="assets/avatar-light.png" alt="">
-            <p>Jaderson Araujo</p>
-        </div>
+      <div id="perfil">
+        <img src="assets/avatar-light.png" alt="" />
+        <p>Jaderson Araujo</p>
+      </div>
 
-        <ul>
-            <li>
-                <a href="#">Link 1</a>
-            </li>
-            <li>
-                <a href="#">Link 2</a>
-            </li>
-            <li>
-                <a href="#">Link 3</a>
-            </li>
-            <li>
-                <a href="#">Link 4</a>
-            </li>
-        </ul>
+      <div id="troca" onclick="troca()">
+        <button></button>
+      </div>
 
-        <div id="linksSocial">
-            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-        </div>
+      <ul>
+        <li>
+          <a href="#">Link 1</a>
+        </li>
+        <li>
+          <a href="#">Link 2</a>
+        </li>
+        <li>
+          <a href="#">Link 3</a>
+        </li>
+        <li>
+          <a href="#">Link 4</a>
+        </li>
+      </ul>
 
-        <div id="rodape">
-            &copy; Desenvolvido por <a href="#">Jaderson Araujo</a>
-        </div>
+      <div id="linksSocial">
+        <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      </div>
+
+      <div id="rodape">
+        &copy; Desenvolvido por <a href="#">Jaderson Araujo</a>
+      </div>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      function troca() {
+        const html = document.documentElement;
+        html.classList.toggle("light");
+
+        const img = document.querySelector("#profile img");
+
+        if (html.classList.contains("light")) {
+          img.setAttribute("src", "assets/avatar-light.png");
+        } else {
+          img.setAttribute("src", "assets/avatar.png");
+        }
+      }
+    </script>
+  </body>
 </html>

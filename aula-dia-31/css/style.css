@@ -29,6 +29,38 @@ body {
     height: 150px;
 }
 
+#troca {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    width: 64px;
+    height: 24px;
+    margin: 24px auto;
+    border-radius: 50px;
+    display: block;    
+    position: relative
+}
+
+#troca button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    border: 0;
+    background: white url('../assets/moon-stars.svg') no-repeat center;
+    animation: slide-back .4s;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#troca button:hover {
+    outline: 8px solid rgba(255, 255, 255, 0.2);
+}
+
+.light #troca button {
+    animation: slide-in .4s forwards;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -77,4 +109,24 @@ ul li a:hover {
         background: url('../assets/bg-mobile.jpg') no-repeat top center/cover;
         
     }
+}
+
+/* animation */
+
+@keyframes slide-in {
+	from {
+		left: 0;
+	}
+	to {
+		left: 50%;
+	}
+}
+
+@keyframes slide-back {
+	from {
+		left: 50%;
+	}
+	to {
+		left: 0;
+	}
 }
